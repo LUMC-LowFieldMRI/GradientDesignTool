@@ -23,10 +23,8 @@ import matplotlib.pyplot as plt
 
     Source Name   : gradientCalculation.py
 
-    Author        : Patrick Fuchs & Bart de Vos & Tom O'Reilly
-    Date          : 13/07/2020
-
-    Original code by Tom O'Reilly based on Matlab implementation of B. de Vos
+    Author        : Patrick Fuchs
+    Date          : 14/04/2020
 
 ==============================================================================
 """
