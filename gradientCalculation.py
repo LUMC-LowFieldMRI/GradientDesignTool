@@ -150,7 +150,7 @@ def generateCoil(designParameters, **kwargs):
     nrWires = designParameters['nrWires']
     wires = calculateContour(streamFun, lengthTerm, nrWires)
 
-    wireDiameter = kwargs.get('wireDiameter', 1.5e-3)  # metre
+    wireDiameter = designParameters['wireDiameter']  # metre
     wireLength = calculateWireLength(wires, currRadius)
     resistance = calculateResistance(wireLength, wireDiameter)
     if INFO:
