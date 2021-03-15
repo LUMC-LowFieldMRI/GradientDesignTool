@@ -249,6 +249,7 @@ class GDT_GUI(tk.Tk):
         designParameters['apo'] = self.apodisationTerm.get()
         designParameters['nrModes'] = self.higherOrderTerms.get()
         designParameters['nrWires'] = self.numWires.get()
+        designParameters['wireDiameter'] = self.wireDiameter.get()*1e-3
        
      
         # Halbach system:
