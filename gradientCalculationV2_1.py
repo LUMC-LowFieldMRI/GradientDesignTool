@@ -8,7 +8,9 @@ Created on Mon Nov  4 17:02:30 2019
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import special
-from scipy import spatial
+import numexpr as ne
+import time
+
 
 def calcP(mm, aa, bb, kk):
     mu0 = 4 * np.pi * 10**(-7)
@@ -170,7 +172,6 @@ def halbachZgradient(linearLength = 140, coilRad = 135, coilLength = 350, numWir
     return calculateContour(streamF.real, numWires, phi, z)
 
 def calculateBfield(contours, DSV, resolution, coilRad, direction):
-    import numexpr as ne
     
     radius = np.float32(DSV/2)
     
@@ -188,7 +189,6 @@ def calculateBfield(contours, DSV, resolution, coilRad, direction):
     
     bField = np.zeros(np.shape(points)[0], dtype = np.float32)
     
-    import time
     startTime = time.time()
     wireCounter = 1
     for wireLevel in wireLevels:
